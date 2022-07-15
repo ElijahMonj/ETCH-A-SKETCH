@@ -5,7 +5,7 @@ body {
     background-color: aliceblue;
     display: grid;
     grid-template-columns: repeat(16, 20px);
-    grid-template-rows: auto;
+   
 }
 .boxes{
     color:red;

@@ -1,18 +1,25 @@
 const container = document.querySelector('#container');
-//container.setAttribute("style", "background-color:blue;");
+//main container of bix box
 
 const content = document.createElement('div');
 content.classList.add('content');
-content.textContent="xd";
-document.getElementByClassName("content").style.color = "blue";
+//container of grids, this is the big box
 
-
-for (i=1;i<=16;i++){
+let grid=1;
+let grindInput=16;
+let maxGrid=grindInput*grindInput;
+while (grid<=maxGrid){
     const box = document.createElement('div');
     box.classList.add('boxes');
     box.textContent="⠀⠀";
     content.appendChild(box);
+    grid++;
 }
+content.style.gridTemplateColumns = `repeat(${grindInput}, 20px)`;
+console.log("column i is "+grindInput)
+content.style.gridTemplateRows = `repeat(${grindInput}, 20px)`;
+
+
 container.appendChild(content);
 
 
