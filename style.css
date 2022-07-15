@@ -5,10 +5,10 @@ body {
     background-color: black;
     display: grid;
     
-    max-width: 750px;
-    min-width: 750px;
-    max-height: 750px;
-    min-height: 750px;
+    max-width: 960px;
+    min-width: 960px;
+    max-height: 960px;
+    min-height: 960px;
 }
 .boxes{
     color:red;
