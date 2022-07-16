@@ -11,7 +11,7 @@ let maxGrid=grindInput*grindInput;
 while (grid<=maxGrid){
     const box = document.createElement('div');
     box.classList.add('boxes');
-    
+    //box.textContent=grid;
     
     content.appendChild(box);
     grid++;
@@ -19,8 +19,9 @@ while (grid<=maxGrid){
 content.style.gridTemplateColumns = `repeat(${grindInput}, auto)`;
 console.log("column i is "+grindInput)
 content.style.gridTemplateRows = `repeat(${grindInput}, auto)`;
+toChange();
 }
-
+//create grid
 
 function customSize(){
 
@@ -34,8 +35,7 @@ function customSize(){
         startGrid(userInput);
     }
 }
-
-
+//enter new grid
 function clearElements(){
     
     const toRemove = document.querySelectorAll('.boxes');
@@ -43,19 +43,18 @@ function clearElements(){
     toRemove.forEach(boxes => {
       boxes.remove();
     });
-
+    
 }
-
-// to change color code below
-var color="black";
-document.querySelector("div").addEventListener(
-    "mouseover", function () {
-
-document.querySelector("div").style.background = color;
-})
-  
+//clear grid
 
 
 container.appendChild(content);
-
-
+toChange();
+function toChange(){
+var gridTest =document.getElementsByClassName('boxes');
+let gridArray=Array.from(gridTest);
+gridArray.forEach(v => v.addEventListener('click', function() {
+    v.style.background = 'black';
+  }));
+}
+  //change color of grid
