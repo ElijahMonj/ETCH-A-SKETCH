@@ -54,10 +54,10 @@ function toChange(){
     let gridArray=Array.from(gridTest);
     gridArray.forEach(v => v.addEventListener('mousedown', function() {
         if (down===true){
-            document.getElementById("container").style.cursor = "default";
+          
             down=false;
         }else{
-            document.getElementById("container").style.cursor = "move";
+            
             down=true;
         }
     }));
