@@ -1,3 +1,4 @@
+
 const container = document.querySelector('#container');
 //main container of bix box
 const content = document.createElement('div');
@@ -56,6 +57,11 @@ let gridArray=Array.from(gridTest);
 gridArray.forEach(v => v.addEventListener('click', function() {
     v.style.background = 'black';
   }));
-
 }
   //change color of grid
+  function changeSize(){
+      let size =document.getElementById('sizeSlider').value;
+      console.log(size);
+      document.getElementById("boxSize").innerHTML = size+"x"+size;
+  }
+  
