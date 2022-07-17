@@ -48,12 +48,26 @@ container.appendChild(content);
 toChange();
 
 function toChange(){
-var gridTest =document.getElementsByClassName('boxes');
-let gridArray=Array.from(gridTest);
-gridArray.forEach(v => v.addEventListener('mousedown', function() {
-    v.style.background = 'black';
-  }));
-  
+    let down=false;
+    let hover=false;
+    var gridTest =document.getElementsByClassName('boxes');
+    let gridArray=Array.from(gridTest);
+    gridArray.forEach(v => v.addEventListener('mousedown', function() {
+        if (down===true){
+            document.getElementById("container").style.cursor = "default";
+            down=false;
+        }else{
+            document.getElementById("container").style.cursor = "move";
+            down=true;
+        }
+    }));
+    gridArray.forEach(v => v.addEventListener('mousemove', function() {
+        if (down===true){
+            
+            v.style.background = 'black';
+        }
+    }));
+    
 }
   //change color of grid
   function changeSize(){
