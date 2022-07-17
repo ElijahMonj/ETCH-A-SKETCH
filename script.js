@@ -26,15 +26,9 @@ toChange();
 
 function customSize(){
 
-    let userInput= prompt("Please enter grid value:","64");
-    userInput = parseInt(userInput);
-    console.log("new grid dimensions is "+userInput)
-    if (isNaN(userInput)||100<userInput){    
-        alert("The input is not valid.");
-    }else{
+    let userInput= document.getElementById('sizeSlider').value;   
         clearElements();
-        startGrid(userInput);
-    }
+        startGrid(userInput);  
 }
 //enter new grid
 function clearElements(){
@@ -50,18 +44,21 @@ function clearElements(){
 
 
 container.appendChild(content);
+
 toChange();
+
 function toChange(){
 var gridTest =document.getElementsByClassName('boxes');
 let gridArray=Array.from(gridTest);
-gridArray.forEach(v => v.addEventListener('click', function() {
+gridArray.forEach(v => v.addEventListener('mousedown', function() {
     v.style.background = 'black';
   }));
+  
 }
   //change color of grid
   function changeSize(){
       let size =document.getElementById('sizeSlider').value;
-      console.log(size);
+     
       document.getElementById("boxSize").innerHTML = size+"x"+size;
   }
-  
+  //slider
