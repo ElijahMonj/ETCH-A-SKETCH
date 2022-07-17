@@ -56,5 +56,6 @@ let gridArray=Array.from(gridTest);
 gridArray.forEach(v => v.addEventListener('click', function() {
     v.style.background = 'black';
   }));
+
 }
   //change color of grid

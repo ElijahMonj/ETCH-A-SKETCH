@@ -1,5 +1,32 @@
 body {
-    background-color: gray;
+    background-color: #90B5FF;
+    font-family: Monospace;
+    
+}
+button{
+    font-family: Monospace;
+    padding: 15px 25px;
+    font-size: 15px;
+    text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #48AFE6;
+  min-width: 150px;
+}
+button:hover {background-color: #7ED2FF}
+
+button:active {
+  background-color: #48AFE6;
+  box-shadow: 0 5px #2747B3;
+  transform: translateY(4px);
+}
+.title{
+    font-size: 50px;
+    font-weight: bolder;
 }
 .content{
     background-color: black;
@@ -9,11 +36,21 @@ body {
     min-width: 960px;
     max-height: 960px;
     min-height: 960px;
+    box-shadow: 2px 2px 4px #000000;
 }
 .boxes{
-    
     background-color: white;
     
-    margin: .5px;
+}
+.copyrights{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   
+}
+.copyrights > div {
+    
+    margin: 5px;
+    font-size: 20px;
     
 }
