@@ -33,10 +33,10 @@ button:active {
     background-color: black;
     display: grid;
     
-    max-width: 960px;
-    min-width: 960px;
-    max-height: 960px;
-    min-height: 960px;
+    max-width: 750px;
+    min-width: 750px;
+    max-height: 750px;
+    min-height: 750px;
     box-shadow: 2px 2px 4px #000000;
 }
 .boxes{
@@ -52,6 +52,56 @@ button:active {
 .copyrights > div {
     
     margin: 5px;
-    font-size: 20px;
+    font-size: 15px;
     
+}
+
+.githubicon {
+  transition: transform .25s; /* Animation */
+  margin: 0 auto;
+}
+
+.githubicon:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#boxSize{
+    font-size: 20px;
+}
+
+#sizeSlider {
+    -webkit-appearance: none;
+    width: 10%;
+    height: 5px;
+    background: #DBF5F5;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  #sizeSlider:hover {
+    opacity: 1;
+  }
+  
+  #sizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width:10px;
+    height: 15px;
+    background: #08239E;
+    cursor: pointer;
+  }
+  
+  #sizeSlider::-moz-range-thumb {
+    width: 10;
+    height: 15px;
+    background: #08239E;
+    cursor: pointer;
+  }
+  input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+    border-radius: 5px;
+	width: 40px;
+	height: 40px;
 }

@@ -77,3 +77,6 @@ function toChange(){
       document.getElementById("boxSize").innerHTML = "Dimensions: "+size+"x"+size;
   }
   //slider
+function save(){
+    
+}
