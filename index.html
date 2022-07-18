@@ -15,13 +15,17 @@
     <div class="title">ETCH-A-SKETCH</div>
     <br>
     <button onclick="customSize()">Start New</button>
-    <button onclick="">Select Color</button>
+    
     <button onclick="">Save!</button>
     <br><br><br>
-    <div id="boxSize">16x16</div>
     
+        
+        <div id="boxSize">Dimensions: 16x16</div>
+
     <input id="sizeSlider" type="range" value="16" min="1" max="100" oninput="changeSize()">
-    <br><br><br>
+    <br>
+    <input type="color" id="colorInput">
+    <br><br>
     <div id="container"></div>
     <br><br>
     <div class="copyrights">

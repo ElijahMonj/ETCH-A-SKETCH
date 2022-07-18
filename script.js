@@ -49,7 +49,7 @@ toChange();
 
 function toChange(){
     let down=false;
-    let hover=false;
+    
     var gridTest =document.getElementsByClassName('boxes');
     let gridArray=Array.from(gridTest);
     gridArray.forEach(v => v.addEventListener('mousedown', function() {
@@ -61,10 +61,11 @@ function toChange(){
             down=true;
         }
     }));
-    gridArray.forEach(v => v.addEventListener('mousemove', function() {
+    gridArray.forEach(v => v.addEventListener('mouseover', function() {
         if (down===true){
-            
-            v.style.background = 'black';
+          
+         
+            v.style.background = document.getElementById("colorInput").value;;    
         }
     }));
     
@@ -73,6 +74,6 @@ function toChange(){
   function changeSize(){
       let size =document.getElementById('sizeSlider').value;
      
-      document.getElementById("boxSize").innerHTML = size+"x"+size;
+      document.getElementById("boxSize").innerHTML = "Dimensions: "+size+"x"+size;
   }
   //slider
