@@ -78,5 +78,5 @@ function toChange(){
   }
   //slider
 function save(){
-    
+    alert("Still on Beta! Sorry! :(")
 }
